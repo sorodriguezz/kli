@@ -5,4 +5,5 @@ export interface ProjectOptions {
   runtime: string;
   framework: string;
   database: string;
+  dependencies: string;
 }

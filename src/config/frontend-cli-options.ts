@@ -9,7 +9,7 @@ export const frontendCliOptions: LanguageConfig[] = [
         frameworks: [
           {
             name: "express",
-            databases: ["none", "mongodb", "postgresql"],
+            databases: ["none", "mongo", "postgresql"],
           },
         ],
       },
@@ -23,7 +23,7 @@ export const frontendCliOptions: LanguageConfig[] = [
         frameworks: [
           {
             name: "express",
-            databases: ["none", "mongodb", "postgresql"],
+            databases: ["none", "mongo", "postgresql"],
           },
         ],
       },

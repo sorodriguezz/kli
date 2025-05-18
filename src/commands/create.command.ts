@@ -1,9 +1,10 @@
 import path from "path";
 import fs from "fs";
-// import { execSync } from "child_process";
+import { execSync } from "child_process";
 
 import { TemplateManagerSingleton } from "../core/template-manager-singleton";
 import { TemplateManager } from "../core/template-manager";
+import { copyTemplate } from "../utils/copy-template.util";
 
 export class CreateCommand {
   templateManager: TemplateManager;
@@ -16,39 +17,38 @@ export class CreateCommand {
   async execute() {
     const options = await this.templateManager.promptOptions();
     const projectRoot = path.resolve(__dirname, "..", "..");
-    console.log(projectRoot);
 
-    // const templatePath = this.templateManager.getTemplatePath(
-    //   projectRoot,
-    //   options
-    // );
-    // const destination = path.resolve(process.cwd(), options.name);
+    const templatePath = this.templateManager.getTemplatePath(
+      projectRoot,
+      options
+    );
 
-    // console.log("Template path:", templatePath);
-    // console.log("Project root:", projectRoot);
+    const destination = path.resolve(process.cwd(), options.name);
 
-    // if (!fs.existsSync(templatePath)) {
-    //   console.error(`❌ La ruta del template no existe: ${templatePath}`);
-    //   console.error(
-    //     "Por favor, verifica que la estructura de directorios sea correcta."
-    //   );
-    //   return;
-    // }
+    if (!fs.existsSync(templatePath)) {
+      console.error(`❌ La ruta del template no existe: ${templatePath}`);
+      console.error(
+        "Por favor, verifica que la estructura de directorios sea correcta."
+      );
+      return;
+    }
 
-    // await copyTemplate(templatePath, destination, {
-    //   replacements: {
-    //     [`"name": "cli"`]: `"name": "${options.name}"`,
-    //   },
-    // });
+    await copyTemplate(templatePath, destination, {
+      replacements: {
+        [`"name": "kli"`]: `"name": "${options.name}"`,
+      },
+    });
 
-    // execSync("npm install", { stdio: "inherit" });
+    if (options.dependencies === "sí") {
+      execSync(`cd ${options.name} && npm install`, { stdio: "inherit" });
+    }
 
-    // console.log(`✅ Proyecto ${options.name} creado:`);
-    // console.log(`  - Tipo: ${options.projectType}`);
-    // console.log(`  - Lenguaje: ${options.language}`);
-    // console.log(`  - Framework: ${options.framework}`);
-    // if (options.bundler) console.log(`  - Bundler: ${options.bundler}`);
-    // console.log(`  - Características: ${options.feature}`);
-    // if (options.db) console.log(`  - Base de datos: ${options.db}`);
+    console.clear();
+    console.log(`✅ Proyecto ${options.name} creado:`);
+    console.log(`  - Tipo: ${options.projectType}`);
+    console.log(`  - Lenguaje: ${options.language}`);
+    console.log(`  - Framework: ${options.framework}`);
+    console.log(`  - Runtime: ${options.runtime}`);
+    console.log(`  - Características: ${options.database}`);
   }
 }

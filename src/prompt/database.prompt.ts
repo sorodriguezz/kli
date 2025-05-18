@@ -3,14 +3,14 @@ import { FrameworkConfig } from "../config/interfaces/framework-options.interfac
 import { LanguageConfig } from "../config/interfaces/language-options.interface";
 import { ProjectConfig } from "../config/interfaces/project-options.interface";
 import { RuntimesConfig } from "../config/interfaces/runtime-options.interface";
-import { ProjectAnswers } from "../core/interfaces/project-answer.interface";
+import { ProjectOptions } from "../core/interfaces/project-options.interface";
 import { getPropertieCliOpts } from "../utils/objects-manipulation.util";
 
 export const databasePrompt = {
   type: "list",
   name: "database",
   message: "¿Qué base de datos quieres usar?",
-  choices: (answers: ProjectAnswers) => {
+  choices: (answers: ProjectOptions) => {
     const projectType = getPropertieCliOpts<ProjectConfig>(
       cliOptions.projectTypes,
       answers.projectType

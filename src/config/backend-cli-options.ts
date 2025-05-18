@@ -1,20 +1,20 @@
 import { LanguageConfig } from "./interfaces/language-options.interface";
 
 export const backendCliOptions: LanguageConfig[] = [
-  {
-    name: "javascript",
-    runtimes: [
-      {
-        name: "node",
-        frameworks: [
-          {
-            name: "express",
-            databases: ["none", "mongodb", "postgresql"],
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   name: "javascript",
+  //   runtimes: [
+  //     {
+  //       name: "node",
+  //       frameworks: [
+  //         {
+  //           name: "express",
+  //           databases: ["none", "mongo", "postgresql"],
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     name: "typescript",
     runtimes: [
@@ -23,12 +23,16 @@ export const backendCliOptions: LanguageConfig[] = [
         frameworks: [
           {
             name: "express",
-            databases: ["none", "mongodb", "postgresql"],
+            databases: [
+              // "none",
+              "mongo",
+              // "postgresql"
+            ],
           },
-          {
-            name: "fastify",
-            databases: ["none", "mongodb", "postgresql"],
-          },
+          // {
+          //   name: "fastify",
+          //   databases: ["none", "mongo", "postgresql"],
+          // },
         ],
       },
     ],

@@ -1,14 +1,16 @@
 import inquirer from "inquirer";
+import path from "path";
+
 import { databasePrompt } from "../prompt/database.prompt";
 import {
   frameworkPrompt,
+  installDependenciesJsTsPrompt,
   languagePrompt,
   projectNamePrompt,
   projectTypePrompt,
   runtimePrompt,
 } from "../prompt";
 import { ProjectOptions } from "./interfaces/project-options.interface";
-import { ProjectAnswers } from "./interfaces/project-answer.interface";
 
 export class TemplateManager {
   public async promptOptions(): Promise<ProjectOptions> {
@@ -20,9 +22,10 @@ export class TemplateManager {
         runtimePrompt,
         frameworkPrompt,
         databasePrompt,
+        installDependenciesJsTsPrompt,
       ];
 
-      const answers = await inquirer.prompt<ProjectAnswers>(questions);
+      const answers = await inquirer.prompt<ProjectOptions>(questions);
 
       return answers;
     } catch (error) {
@@ -41,35 +44,19 @@ export class TemplateManager {
     }
   }
 
-  // public getTemplatePath(projectRoot: string, options: ProjectOptions): string {
-  //   const segments = ["templates", options.projectType];
+  public getTemplatePath(projectRoot: string, options: ProjectOptions): string {
+    const segments = ["templates"];
+    // TODO - validar para tipos de proyecto
+    segments.push(
+      options.projectType,
+      options.language,
+      options.runtime,
+      options.framework,
+      options.database
+    );
 
-  //   if (options.projectType === "backend") {
-  //     if (
-  //       options.language === "javascript" ||
-  //       options.language === "typescript"
-  //     ) {
-  //       segments.push(
-  //         "nodejs",
-  //         options.language,
-  //         options.framework,
-  //         options.bundler || "",
-  //         options.feature,
-  //         options.db || ""
-  //       );
-  //     } else {
-  //       segments.push(
-  //         options.language,
-  //         options.framework,
-  //         options.feature,
-  //         options.db || ""
-  //       );
-  //     }
-  //   } else {
-  //     segments.push(options.framework, options.feature, options.db || "");
-  //   }
+    const cleanSegments = segments.filter(Boolean);
 
-  //   const cleanSegments = segments.filter(Boolean);
-  //   return path.resolve(projectRoot, ...cleanSegments);
-  // }
+    return path.resolve(projectRoot, ...cleanSegments);
+  }
 }
