@@ -3,14 +3,20 @@ import fs from "fs";
 // import { execSync } from "child_process";
 
 import { TemplateManagerSingleton } from "../core/template-manager-singleton";
-import { copyTemplate } from "../utils/copy-template.util";
+import { TemplateManager } from "../core/template-manager";
 
 export class CreateCommand {
-  templateManager = TemplateManagerSingleton.getInstance().getTemplateManager();
+  templateManager: TemplateManager;
+
+  constructor() {
+    this.templateManager =
+      TemplateManagerSingleton.getInstance().getTemplateManager();
+  }
 
   async execute() {
     const options = await this.templateManager.promptOptions();
     const projectRoot = path.resolve(__dirname, "..", "..");
+    console.log(projectRoot);
 
     // const templatePath = this.templateManager.getTemplatePath(
     //   projectRoot,
@@ -35,8 +41,7 @@ export class CreateCommand {
     //   },
     // });
 
-      // execSync("npm install", { stdio: "inherit" });
-
+    // execSync("npm install", { stdio: "inherit" });
 
     // console.log(`✅ Proyecto ${options.name} creado:`);
     // console.log(`  - Tipo: ${options.projectType}`);

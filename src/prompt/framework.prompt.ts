@@ -2,7 +2,7 @@ import { cliOptions } from "../config/cli-options";
 import { LanguageConfig } from "../config/interfaces/language-options.interface";
 import { ProjectConfig } from "../config/interfaces/project-options.interface";
 import { RuntimesConfig } from "../config/interfaces/runtime-options.interface";
-import { ProjectAnswers } from "../core/template-manager";
+import { ProjectAnswers } from "../core/interfaces/project-answer.interface";
 import { getPropertieCliOpts } from "../utils/objects-manipulation.util";
 
 export const frameworkPrompt = {

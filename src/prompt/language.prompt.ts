@@ -1,6 +1,6 @@
 import { cliOptions } from "../config/cli-options";
 import { ProjectConfig } from "../config/interfaces/project-options.interface";
-import { ProjectAnswers } from "../core/template-manager";
+import { ProjectAnswers } from "../core/interfaces/project-answer.interface";
 import { getPropertieCliOpts } from "../utils/objects-manipulation.util";
 
 export const languagePrompt = {
