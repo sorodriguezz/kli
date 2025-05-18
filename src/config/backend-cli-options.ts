@@ -24,7 +24,7 @@ export const backendCliOptions: LanguageConfig[] = [
           {
             name: "express",
             databases: [
-              // "none",
+              "none",
               "mongo",
               // "postgresql"
             ],

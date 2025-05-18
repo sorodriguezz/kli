@@ -44,11 +44,12 @@ export class CreateCommand {
     }
 
     console.clear();
-    console.log(`✅ Proyecto ${options.name} creado:`);
+    console.log(`✅ Proyecto "${options.name}" creado:`);
     console.log(`  - Tipo: ${options.projectType}`);
     console.log(`  - Lenguaje: ${options.language}`);
     console.log(`  - Framework: ${options.framework}`);
     console.log(`  - Runtime: ${options.runtime}`);
-    console.log(`  - Características: ${options.database}`);
+    if (options.database !== 'none') console.log(`  - Base de datos: ${options.database}`);
+    if (options.dependencies !== 'no') console.log(`  - Se instalaron dependencias`);
   }
 }
