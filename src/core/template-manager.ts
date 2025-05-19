@@ -3,9 +3,12 @@ import path from "path";
 
 import { databasePrompt } from "../prompt/database.prompt";
 import {
+  arquitecturePrompt,
   frameworkPrompt,
   installDependenciesJsTsPrompt,
   languagePrompt,
+  ormOdmPrompt,
+  packageManagerPrompt,
   projectNamePrompt,
   projectTypePrompt,
   runtimePrompt,
@@ -19,9 +22,12 @@ export class TemplateManager {
         projectNamePrompt,
         projectTypePrompt,
         languagePrompt,
+        arquitecturePrompt,
         runtimePrompt,
         frameworkPrompt,
+        packageManagerPrompt,
         databasePrompt,
+        ormOdmPrompt,
         installDependenciesJsTsPrompt,
       ];
 
@@ -50,9 +56,12 @@ export class TemplateManager {
     segments.push(
       options.projectType,
       options.language,
+      options.arquitecture,
       options.runtime,
       options.framework,
-      options.database
+      options.pmanager,
+      options.database,
+      options.ormodms
     );
 
     const cleanSegments = segments.filter(Boolean);

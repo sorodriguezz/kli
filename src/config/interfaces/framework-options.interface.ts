@@ -1,4 +1,6 @@
-export interface FrameworkConfig {
+import { IPackageManagerOptions } from "./package-options.interface";
+
+export interface IFrameworkOptions {
   name: string;
-  databases: string[];
+  pmanagers: IPackageManagerOptions[];
 }

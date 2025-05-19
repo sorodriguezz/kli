@@ -1,6 +1,8 @@
 import { cliOptions } from "../config/cli-options";
-import { LanguageConfig } from "../config/interfaces/language-options.interface";
+import { IArquitectureOptions } from "../config/interfaces/arquitecture-options.interface";
+import { ILanguageOptions } from "../config/interfaces/language-options.interface";
 import { ProjectConfig } from "../config/interfaces/project-options.interface";
+import { IRuntimesOptions } from "../config/interfaces/runtime-options.interface";
 import { ProjectOptions } from "../core/interfaces/project-options.interface";
 import { getPropertieCliOpts } from "../utils/objects-manipulation.util";
 
@@ -13,11 +15,17 @@ export const runtimePrompt = {
       cliOptions.projectTypes,
       answers.projectType
     );
-    const language = getPropertieCliOpts<LanguageConfig>(
+
+    const language = getPropertieCliOpts<ILanguageOptions>(
       projectType.languages,
       answers.language
     );
 
-    return language.runtimes.map((runtime) => runtime.name) || [];
+    const arquitecture = getPropertieCliOpts<IArquitectureOptions>(
+      language.arquitectures,
+      answers.arquitecture
+    );
+
+    return arquitecture.runtimes.map((runtime) => runtime.name) || [];
   },
 };

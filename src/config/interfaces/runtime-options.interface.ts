@@ -1,6 +1,6 @@
-import { FrameworkConfig } from "./framework-options.interface";
+import { IFrameworkOptions } from "./framework-options.interface";
 
-export interface RuntimesConfig {
+export interface IRuntimesOptions {
   name: string;
-  frameworks: FrameworkConfig[];
+  frameworks: IFrameworkOptions[];
 }

@@ -12,6 +12,7 @@ export const languagePrompt = {
       cliOptions.projectTypes,
       answers.projectType
     );
-    return projectType?.languages.map((lang) => lang.name) || [];
+
+    return projectType.languages.map((lang) => lang.name) || [];
   },
 };

@@ -1,29 +1,6811 @@
-import { LanguageConfig } from "./interfaces/language-options.interface";
+import { ILanguageOptions } from "./interfaces/language-options.interface";
 
-export const frontendCliOptions: LanguageConfig[] = [
+export const frontendCliOptions: ILanguageOptions[] = [
   {
-    name: "javascript",
-    runtimes: [
+    name: "typescript",
+    arquitectures: [
       {
-        name: "node",
-        frameworks: [
+        name: "clean-arquitecture",
+        runtimes: [
           {
-            name: "express",
-            databases: ["none", "mongo", "postgresql"],
+            name: "node",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "deno",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "bun",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "feature-based",
+        runtimes: [
+          {
+            name: "node",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "deno",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "bun",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "layered",
+        runtimes: [
+          {
+            name: "node",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "deno",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "bun",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "monorepo",
+        runtimes: [
+          {
+            name: "node",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "deno",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "bun",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "ports-and-adapters",
+        runtimes: [
+          {
+            name: "node",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "deno",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "bun",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           },
         ],
       },
     ],
   },
   {
-    name: "typescript",
-    runtimes: [
+    name: "javascript",
+    arquitectures: [
       {
-        name: "node",
-        frameworks: [
+        name: "clean-arquitecture",
+        runtimes: [
           {
-            name: "express",
-            databases: ["none", "mongo", "postgresql"],
+            name: "node",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "deno",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "bun",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "feature-based",
+        runtimes: [
+          {
+            name: "node",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "deno",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "bun",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "layered",
+        runtimes: [
+          {
+            name: "node",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "deno",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "bun",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "monorepo",
+        runtimes: [
+          {
+            name: "node",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "deno",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "bun",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "ports-and-adapters",
+        runtimes: [
+          {
+            name: "node",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "deno",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "bun",
+            frameworks: [
+              {
+                name: "express",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "fastify",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "hapi",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "koa",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "nest",
+                pmanagers: [
+                  {
+                    name: "npm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "yarn",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                  {
+                    name: "pnpm",
+                    databases: [
+                      {
+                        name: "mongo",
+                        ormodms: ["mongoose", "prisma"],
+                      },
+                      {
+                        name: "postgres",
+                        ormodms: ["prisma", "sequelize", "typeorm"],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           },
         ],
       },

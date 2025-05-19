@@ -1,6 +1,6 @@
-import { RuntimesConfig } from "./runtime-options.interface";
+import { IArquitectureOptions } from "./arquitecture-options.interface";
 
-export interface LanguageConfig {
+export interface ILanguageOptions {
   name: string;
-  runtimes: RuntimesConfig[];
+  arquitectures: IArquitectureOptions[];
 }

@@ -5,6 +5,7 @@ import { execSync } from "child_process";
 import { TemplateManagerSingleton } from "../core/template-manager-singleton";
 import { TemplateManager } from "../core/template-manager";
 import { copyTemplate } from "../utils/copy-template.util";
+import { COLORS } from "../utils/colors.util";
 
 export class CreateCommand {
   templateManager: TemplateManager;
@@ -43,13 +44,18 @@ export class CreateCommand {
       execSync(`cd ${options.name} && npm install`, { stdio: "inherit" });
     }
 
+      // console.log("%cConsulta:\n", COLORS.red);
+
     console.clear();
     console.log(`✅ Proyecto "${options.name}" creado:`);
-    console.log(`  - Tipo: ${options.projectType}`);
+    console.log(`  - Tipo: %c${options.projectType}`, COLORS.blue);
     console.log(`  - Lenguaje: ${options.language}`);
-    console.log(`  - Framework: ${options.framework}`);
+    console.log(`  - Arquitectura: ${options.arquitecture}`);
     console.log(`  - Runtime: ${options.runtime}`);
-    if (options.database !== 'none') console.log(`  - Base de datos: ${options.database}`);
-    if (options.dependencies !== 'no') console.log(`  - Se instalaron dependencias`);
+    console.log(`  - Framework: ${options.framework}`);
+    console.log(`  - Gestor de paquetes: ${options.pmanager}`);
+    console.log(`  - Base de datos: ${options.database}`);
+    console.log(`  - Base de datos: ${options.ormodms}`);
+    if (options.dependencies !== "no") console.log(`  - Se instalaron dependencias`);
   }
 }

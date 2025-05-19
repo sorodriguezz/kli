@@ -1,6 +1,6 @@
-import { LanguageConfig } from "./language-options.interface";
+import { ILanguageOptions } from "./language-options.interface";
 
 export interface ProjectConfig {
   name: string;
-  languages: LanguageConfig[];
+  languages: ILanguageOptions[];
 }

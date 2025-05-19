@@ -1,8 +1,10 @@
 import { cliOptions } from "../config/cli-options";
-import { FrameworkConfig } from "../config/interfaces/framework-options.interface";
-import { LanguageConfig } from "../config/interfaces/language-options.interface";
+import { IArquitectureOptions } from "../config/interfaces/arquitecture-options.interface";
+import { IFrameworkOptions } from "../config/interfaces/framework-options.interface";
+import { ILanguageOptions } from "../config/interfaces/language-options.interface";
+import { IPackageManagerOptions } from "../config/interfaces/package-options.interface";
 import { ProjectConfig } from "../config/interfaces/project-options.interface";
-import { RuntimesConfig } from "../config/interfaces/runtime-options.interface";
+import { IRuntimesOptions } from "../config/interfaces/runtime-options.interface";
 import { ProjectOptions } from "../core/interfaces/project-options.interface";
 import { getPropertieCliOpts } from "../utils/objects-manipulation.util";
 
@@ -16,21 +18,31 @@ export const databasePrompt = {
       answers.projectType
     );
 
-    const language = getPropertieCliOpts<LanguageConfig>(
+    const language = getPropertieCliOpts<ILanguageOptions>(
       projectType.languages,
       answers.language
     );
 
-    const runtime = getPropertieCliOpts<RuntimesConfig>(
-      language.runtimes,
+    const arquitecture = getPropertieCliOpts<IArquitectureOptions>(
+      language.arquitectures,
+      answers.arquitecture
+    );
+
+    const runtime = getPropertieCliOpts<IRuntimesOptions>(
+      arquitecture.runtimes,
       answers.runtime
     );
 
-    const framework = getPropertieCliOpts<FrameworkConfig>(
+    const framework = getPropertieCliOpts<IFrameworkOptions>(
       runtime.frameworks,
       answers.framework
     );
 
-    return framework.databases || [];
+    const pmanager = getPropertieCliOpts<IPackageManagerOptions>(
+      framework.pmanagers,
+      answers.pmanager
+    );
+
+    return pmanager.databases || [];
   },
 };
